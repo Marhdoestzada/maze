@@ -513,13 +513,13 @@ void draw() {
       final int y = (int) map(serial_port.read(), 1, 255, -100, 100); 
       print(", y: ");
       println(y);
-      if (y < -80) 
+      if (y < -50) 
       {
         key_up_pressed = true;
         key_down_pressed = false;
         key_logAdd(3); // down is released
       }
-      else if (y > 0) 
+      else if (y > -20) 
       {
         key_down_pressed = true;
         key_up_pressed = false;
